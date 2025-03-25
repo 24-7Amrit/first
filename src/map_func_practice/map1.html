@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div>users.map(u=>`<ol>${u.id}-{u.name}-{u.age}-{u.profession}-{u.DL}</ol>`);</div> -->
+    <ul id="list"></ul>
+</body>
+</html>
+<script>
+    const users = [
+  { id: 1, name: 'Alice', age: 28, profession:'archi', DL:'yes' },
+  { id: 2, name: 'Bob', age: 34, profession:'doc', DL:'yes' },
+  { id: 3, name: 'Charlie', age: 22, profession:'tech', DL:'yes' }
+];
+var userData=users.map(u=>`<ol>${u.id}-${u.name}-${u.age}-${u.profession}-${u.DL}</ol>`).join('');
+document.getElementById("list").innerHTML=userData;
+</script>
+
+<!-- here .join('') plays a very crucial role mind it -->
+ <!-- there is more in it kindly Re-visit it and look into it -->
