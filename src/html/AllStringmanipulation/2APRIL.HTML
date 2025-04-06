@@ -1,0 +1,281 @@
+<script>
+// 1st
+// var table = document.createElement("table");
+// for(var attribute in table)
+// {
+//     document.write(property + "<br>");
+// }
+
+// 2nd
+// function hello(){
+//     document.write("hello<br>");
+// }
+// var welcome = function(){
+//     document.write("welcome");
+// }
+
+
+// hello();
+// welcome();
+
+
+
+
+
+// // 3rd not working
+// var pass = prompt("enter pass");
+// if(pass=="admin"){
+//     result = function(){
+//         document.write("verified succesfully");
+//     }
+// } else {
+//     result = function(){
+//         document.write("invalid password");
+//     }
+// }
+// var result;
+
+// 4th
+// (function()
+// {
+//     document.write("hello js how atesre you");
+// })();
+
+// 5th
+// function PrintNumber(howmany)
+// {
+//     for(var i=1; i<=howmany; i++)
+//         {
+//             document.write(i + "<br>")
+//         }
+// }
+// PrintNumber(102)
+
+
+// 6th
+// function Print(city)
+// {
+//     city.map(function(cit){
+//         document.write(cit + "<br>");
+//     })
+// }
+// Print(["Delhi, Hyd"])
+
+// //7th
+// function print(product)
+// {
+//     for(var property in product){
+//         document.write(`${property} : ${product[property]} <br>`);
+//     }
+// }
+//     print({Name:"tv",Price:5500});
+
+
+// // 8th
+// function print(success)
+// {
+//     success();
+// }
+// print (function(){document.write("login success")});
+
+
+// // 9th
+// function print(mfd)
+// {
+//     document.write(`manifactured : ${mfd.toDateString()}`)
+// }
+// print (new Date("2025-10-10"));
+
+// // 10th
+// function print(mfd)
+// {
+//     document.write(`manifactured : ${mfd.toDateString()}`)
+// }
+// var date = new Date("2025-04-02")
+// print (date);
+
+
+// //11th
+// function Details(id,name,price,stock){
+//     document.write(`
+//     Id = ${id} <br>
+//     Name = ${name} <br>
+//     Price = ${(price) ? price:"N/A"} <br>
+//     Stock = ${stock}
+//     `);
+// }
+// // Details (1,"samsung tv",4500, true);
+// Details ( 1,"smasung tv",0,true)
+
+
+// //12th
+// function Details(...args){
+//     var [id,name,price,stock]=args;
+//     document.write(`
+//     Id = ${id} <br>
+//     Name = ${name} <br>
+//     Price = ${(price) ? price:"N/A"} <br>
+//     Stock = ${stock}
+//     `);
+// }
+// // Details (1,"samsung tv",4500, true);
+// Details ( 14,"smasung tv",9800,false)
+
+
+// //13th
+// function Details(title,...args){
+//     var [id,name,price,stock]=args;
+//     document.write(`
+//     <h2> ${title} </h2>
+//     Id = ${id} <br>
+//     Name = ${name} <br>
+//     Price = ${(price) ? price:"N/A"} <br>
+//     Stock = ${stock}
+//     `);
+// }
+// // Details (1,"samsung tv",4500, true);
+// Details ("product details" ,14,"smasung tv",9800,false)
+
+// // 14th
+//     function Details(id,name,price,stock){
+//     document.write(`
+//         Id = ${id} <br>
+//         Name = ${name} <br>
+//         Price = ${(price) ? price:"N/A"} <br>
+//         Stock = ${stock}
+//         `);
+//     }
+//     var values = [124,"anisam",5909,true];
+//     // Details(values);
+//     Details(...values);
+
+//15th
+// var one = ["A","B","C","D"];
+// var two = ["D","E","F"];
+// var three = ["G","H","I"];
+// var result = [...one,...two,...three];
+// console.log(result);
+
+//16th
+// function Addition(a,b)
+// {
+//     return a+b;
+// }
+// function Print(){
+//     document.write("addition=" + Addition(20,30));
+// }
+// Print();
+
+
+//17th
+// var c;
+// function Addition(a,b)
+// {
+//     c= a+b;
+// }
+// function Print(){
+//     document.write("addition=" + c);
+// }
+
+// Print();
+// Addition(30,70);
+//answer undefined since written after print()
+
+// 18
+// var c;
+// function Addition(a,b)
+// {
+//     c= a+b;
+// }
+// Addition(39,70);
+// //answer 109
+// function Print(){
+//     document.write("addition=" + c);
+// }
+// // Addition(30,70);
+// Print();
+// //answer 100
+
+
+// // 19
+//  function print (){
+//     document.write("one<br>");
+//     document.write("two<br>");
+//     document.write("Three<br>");
+    
+//     document.write("four<br>");
+//     return;
+//     document.write("five<br>");
+//  }
+//  print();
+
+// //20
+// function Login(userid,password,success,failure)
+// {
+//     if(userid==="john" && password==="john@1")
+// {
+//     success('Login success');
+// } else {
+//     failure('invalid');
+// }
+// }
+// Login(prompt("enter userid"),
+// prompt("enter pass"),
+// function(response){
+//     document.write(response);
+// },
+// function(error){
+//     document.write(error);
+
+// })
+
+// 21  promise
+// var Login = new Promise(function(resolve,reject){
+//         var userid = prompt("enter user id");
+//         var password = prompt ("enter password");
+//         if(userid==="john" && password==="john@1"){
+//             resolve("login success");
+//         } else {
+//             reject("invalid id or pass");
+
+//         }
+// })
+// Login
+// .then(function(response){
+//     document.write(response);
+// })
+// .catch(function(reason){
+//     document.write(reason);
+// })
+// .finally(function(){
+//     document.write(`<p>program end</p>`);
+// })
+
+
+//  22
+var add = (a,b)=>a+b;
+var a=prompt("a");
+var b=prompt("b");
+document.write(add(a,b));
+// a=2, b=2 22 answer  how to use parseint ?
+
+var add = (a,b)=>a+b;
+var a=prompt(parseint("a"));
+var b=prompt(parseint("b"));
+document.write(add(a,b));
+
+
+
+
+
+
+
+ </script>
+
+
+
+
+
+
+
+
