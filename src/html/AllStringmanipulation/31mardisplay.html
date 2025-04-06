@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Input Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 1.2em;
+            width: 200px;
+        }
+        .output {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: blue;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" id="inputField" placeholder="Type here..." onkeyup="updateOutput()">
+        <div class="output" id="outputDisplay">Output here...</div>
+    </div>
+
+    <script>
+        function updateOutput() {
+            let inputText = document.getElementById("inputField").value;
+            document.getElementById("outputDisplay").innerText = inputText || "Output here...";
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- oninput="updateOutput()" -->
