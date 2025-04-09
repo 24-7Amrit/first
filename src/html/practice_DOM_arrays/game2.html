@@ -17,24 +17,86 @@
     }
 </style>
 <body>
-    <div id="one"  onclick="change()">guess</div>
+    <div id="one"   onclick="change1()">Guess</div>
+    <div id="two"   onclick="change2()">Guess</div>
+    <div id="three" onclick="change3()">Guess</div>
+    <div id="four"  onclick="change4()">Guess</div>
+    <input type="text" id="value"><button id="btn" onclick="match_or_not()">your answer</button></input>
+    <div id="op"></div>
 </body>
 <script>
-    function timer(){
-        for(let i=0;i<25;i++);
-    }
-    function first(){
-        document.getElementById("one").innerHTML="2";
-    }
-    function second(){
-        document.getElementById("one").innerHTML="done";
-    }
-    function change(){
-        setTimeout(()=>{first();
-            setTimeout(()=>{first();second();},500);
+    var array=[1,1,1,1];
+    var array2=[];
+    function runEtime(){console.log(`${array}`);
+    console.log(`${array2}`);}
+    function firstONE(){document.getElementById("one").innerHTML="2"}
+    function secondONE(){document.getElementById("one").innerHTML="done"}
+    function change1(){
+        if(array[0]==1){
+        setTimeout(()=>{firstONE();
+            setTimeout(()=>{firstONE();secondONE();},500);
         },500);
-        
+        array2.push("2");
+        array.splice(0,1,0);
+        runEtime();
+        }
+        else
+        {}
+    }
+    //-------second
+    function twoTWO(){document.getElementById("two").innerHTML="9"}
+    function secondTWO(){document.getElementById("two").innerHTML="done"}
+    function change2(){
+        if(array[1]==1){
+        setTimeout(()=>{twoTWO();
+            setTimeout(()=>{twoTWO();secondTWO();},500);
+        },500);
+        array2.push("9");
+        array.splice(1,1,0);
+        runEtime();
+        }
+        else
+        {}
+    }
+    //--------------three
+    function threeONE(){document.getElementById("three").innerHTML="4"}
+    function threeTWO(){document.getElementById("three").innerHTML="done"}
+    function change3(){
+        if(array[2]==1){
+        setTimeout(()=>{threeONE();
+            setTimeout(()=>{threeONE();threeTWO();},500);
+        },500);
+        array2.push("4");
+        array.splice(2,1,0);
+        runEtime();
+        }
+        else
+        {}
+    }
+    //------------------ four
+    function fourONE(){document.getElementById("four").innerHTML="5"}
+    function fourTWO(){document.getElementById("four").innerHTML="done"}
+    function change4(){
+        if(array[3]==1){
+        setTimeout(()=>{fourONE();
+            setTimeout(()=>{fourONE();fourTWO()},500);
+        },500);
+        array2.push("5");
+        array.splice(3,1,0);
+        runEtime();
+        }
+        else
+        {}
+    }
+    function match_or_not(){
+        if(array2==document.getElementById("value").value){
+            document.getElementById("op").innerText="success";
+            }else{document.getElementById("op").innerHTML="fail";}
+    }
 
+
+        // console.log(`${array}`);
+        // console.log(`${array2}`);
         // document.getElementById("one").innerHTML="2";
         //when u uncomment below line there is err in i why is that
         //setTimeout(()=>{(let i=0;i<=20;i++);},800)
@@ -42,6 +104,6 @@
                                                 // console.log(document.getElementById("one").innerHTML="1");
         // setTimeout(b,800);
         // setTimeout(a,800)
-    }
+    //}
 </script>
 </html>
