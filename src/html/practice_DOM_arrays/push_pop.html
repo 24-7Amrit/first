@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: yellowgreen;
+        font:30px;
+        color:black;
+        margin:10px;
+        padding:10px;
+        /* border-color:black; */
+         border: 2px solid #000;
+
+    }
+    /* .abs{
+        font-size: 1.5em;
+            font-weight: bold;
+            color: blue;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: white;
+    } */
+</style>
+<body>
+    <div id="a" onclick="click1()">? Guess the number and play the game click the box</div>
+    <div id="2" onclick="click2()">? ? Guess the number and play the game click the box</div>
+    <div id="3" onclick="click3()">? Guess the number and play the game click the box</div>
+    <div id="4" onclick="click4()">? Guess the number and play the game click the box</div>
+    <input id="input" type="text">
+    <button id="6" onclick="click5()">submit</button>
+    <div id="5" class="abs"></div>
+    <!-- <span id="5" class="abs"> </span> -->
+    <!-- <span id="5" class="abs"> </span> -->
+
+</body>
+<script>
+    var arr=[]
+    function click1(){
+        arr.push("1");
+        console.log(`${arr}`);
+    }
+    function click2(){
+        arr.push("2");
+        console.log(`${arr}`);
+    }
+    function click3(){
+        arr.push("3");
+        console.log(`${arr}`);
+    }
+    function click4(){
+        arr.push("4");
+        console.log(`${arr}`);
+    }
+    function click5(){
+        var b=document.getElementById("5").innerText;
+        var a=document.getElementById("input").value;
+        if(a==arr){
+            b="true";
+            // console.log("arr");
+            // console.log("a");
+            //console.log(`${b}`);
+            document.getElementById("5").innerText=`${b}`;
+        }else{;
+            b=`${false}`;
+            // console.log("arr");
+            //console.log('b');
+            //console.log(`${b}`);
+            document.getElementById("5").innerText=`${b}`;
+        }
+        // console.log(`${arr}`);
+        // console.log(`${b}`);
+        // console.log(`${a}`);
+    }
+    
+    
+    
+    // function click(){
+    //     setTimeout(()=>{document.getElementById("a").innerHTML="2";},1000);
+    //     document.getElementById("a").innerHTML="time out";
+    //}
+    
+    
+    
+    // function click1(){((){
+    //         var a=document.getElementById("a").innerHTML="3";
+    //     var b=document.getElementById("a").innerHTML="time out";
+    //     setTimeout(a,2000);
+    //     setTimeout(b,2000);
+    //     })}
+
+
+
+</script>
+
+</html>

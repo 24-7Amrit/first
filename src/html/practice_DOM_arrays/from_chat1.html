@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const messages = [
+        "Hello!",
+        "Welcome to our site.",
+        "Stay tuned for updates.",
+        "Follow us on social media.",
+        "Thanks for visiting!"
+      ];
+
+      for (let i = 0; i < messages.length; i++) {
+        setTimeout(() => {
+          const output = document.getElementById("output");
+          const msg = document.createElement("p");
+          msg.textContent = messages[i];
+          output.appendChild(msg);
+        }, i * 5000); // 5 seconds delay per message
+      }
+    </script>
+  </body>
+</html>

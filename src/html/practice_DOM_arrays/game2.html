@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border:2px solid #000;
+        height:50px;
+        width:50px;
+        padding:20px;
+        margin:10px;
+        font-size: 20px;
+
+    }
+</style>
+<body>
+    <div id="one"  onclick="change()">guess</div>
+</body>
+<script>
+    function timer(){
+        for(let i=0;i<25;i++);
+    }
+    function first(){
+        document.getElementById("one").innerHTML="2";
+    }
+    function second(){
+        document.getElementById("one").innerHTML="done";
+    }
+    function change(){
+        setTimeout(()=>{first();
+            setTimeout(()=>{first();second();},500);
+        },500);
+        
+
+        // document.getElementById("one").innerHTML="2";
+        //when u uncomment below line there is err in i why is that
+        //setTimeout(()=>{(let i=0;i<=20;i++);},800)
+                                                //console.log(setTimeout(()=>{timer()},2000));
+                                                // console.log(document.getElementById("one").innerHTML="1");
+        // setTimeout(b,800);
+        // setTimeout(a,800)
+    }
+</script>
+</html>

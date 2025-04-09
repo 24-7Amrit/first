@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+
+</head>
+<body>
+    <div id="div1" onclick="change()">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+</body>
+<script>
+    const messages = [
+        "Hello!",
+        "Welcome to our site.",
+        "Stay tuned for updates.",
+        "Follow us on social media.",
+        "Thanks for visiting!"
+      ];
+    function change(){
+        for(let i=0;i<=4;i++){
+        setTimeout(()=>{
+        //console.log(i);
+        if(i==1){document.getElementById("div1").innerHTML=`${messages[0]}`;}
+        if(i==2){document.getElementById("div1").innerHTML=`${messages[1]}`;}
+        if(i==3){document.getElementById("div1").innerHTML=`${messages[2]}`;}
+        if(i==4){document.getElementById("div1").innerHTML=`${messages[3]}`;}
+    },i*2000);
+    
+    }}
+
+
+
+
+    //   for (let i = 0; i < messages.length; i++) {
+    //     setTimeout(() => {
+    //       const output = document.getElementById("div1");
+    //       //const msg = document.createElement("p");
+    //       msg.textContent = messages[i];
+    //       output.appendChild(msg);
+    //     }, i * 5000); // 5 seconds delay per message
+    //   }
+
+
+    // function change(){
+    //     setTimeout(msg1,500);
+    //     setTimeout(msg2,1000);
+    //     setTimeout(msg3,1500);
+    // }
+    // function msg1(){document.getElementById("div1").innerHTML="second";}
+    // function msg2(){document.getElementById("div1").innerHTML="Third";}
+    // function msg3(){document.getElementById("div1").innerHTML="Fourth";}
+</script>
+</html>
