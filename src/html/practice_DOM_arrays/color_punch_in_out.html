@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height:10px;
+        width:50px;
+        margin:10px;
+        padding:10px;
+        border:2px solid #000; 
+    }
+</style>
+<body>
+    <div id="div1" onclick="changeColor1()"></div>
+    <div id="div2" onclick="changeColor2()"></div>
+    <div id="div3" onclick="changeColor3()"></div>
+    <div id="div4" onclick="changeColor4()"></div>
+    <button id="but1" onclick="but_rev()"> Reverse</button>
+    <button id="but2" onclick="but_rev2()"> Reverse2</button>
+</body>
+</html>
+<script>
+    var inputarray=[];
+    var rev_array=[];
+    //var rev_array=[...inputarray].reverse();
+    function console1(){
+        console.log(inputarray);
+        console.log(rev_array);
+    }
+function changeColor1(){
+    var d1=document.getElementById("div1");
+    d1.style.backgroundColor="green";
+    inputarray.push("d1");
+    console1();
+    // function rev(){
+    //     rev_array+=rev_array.push([...inputarray].reverse());
+    // }
+}
+
+function changeColor2(){
+    var d2=document.getElementById("div2");
+    d2.style.backgroundColor="green";
+    inputarray.push("d2");
+    console1();
+    // function rev(){
+    //     rev_array+=rev_array.push([...inputarray].reverse());
+    // }
+}
+
+function changeColor3(){
+    var d3=document.getElementById("div3");
+    d3.style.backgroundColor="green";
+    inputarray.push("d3");
+    console1();
+    // function rev(){
+    //     rev_array+=rev_array.push([...inputarray].reverse());
+    // }
+}
+
+function changeColor4(){
+    var d4=document.getElementById("div4");
+    d4.style.backgroundColor="green";
+    inputarray.push("d4");
+    console1();
+    // function rev(){
+    //     rev_array+=rev_array.push([...inputarray].reverse());
+    // }
+}
+
+function but_rev(){
+    console.log(`${rev_array}`);
+    `${rev_array[0]}`.style.backgroundColor="white";
+    `${rev_array[1]}`.style.backgroundColor="white";
+    `${rev_array[2]}`.style.backgroundColor="white";
+    `${rev_array[3]}`.style.backgroundColor="white";
+}
+function but_rev2(){
+        //rev_array+=rev_array.push([...inputarray].reverse());
+        console.log(rev_array);
+        `${rev_array}`;
+        `${rev_array[0]}`;
+    }
+</script>
