@@ -18,6 +18,15 @@ function getData(dataId,getNextData){
 
 
 
+//10:14:00
+
+console.log("fetching data...");
+let p1=asynffunc();
+p1.then((res)=>{
+    console.log(res);
+
+});
+
 
 
 
