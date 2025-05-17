@@ -30,6 +30,14 @@ p1.then((res)=>{
 
 
 
+console.log("fetching data...");
+let p1=asynffunc();
+p1.then((res)=>{
+    console.log(res);
+
+});
+//REPEATED FOR TESTNG 
+
 
 
 // console.log(myname);
