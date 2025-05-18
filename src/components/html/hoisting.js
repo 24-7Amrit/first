@@ -40,6 +40,14 @@ p1.then((res)=>{
 
 
 
+
+console.log("fetching data...");
+let p1=asynffunc();
+p1.then((res)=>{
+    console.log(res);
+    //some problem rectify it 
+
+
 // console.log(myname);
 // var myname="pikoo";
 // show();
