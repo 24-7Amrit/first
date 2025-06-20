@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border:3px solid black;
+        margin:20px;
+        padding:40px;
+        height:10px;
+        width:100px;
+
+    }
+</style>
+<body>
+    
+<div id="one" onclick="num()"></div>
+
+</body>
+
+<script>
+    array =[1,2,3,4,""];
+    function num(){
+        for(let i=0;i<array.length;i++){
+        setTimeout(()=>{
+             document.getElementById("one").innerHTML = array[i];
+        //`${array}`;       //why it didnt work ? page hanged 
+    },i*1000);
+}
+    
+    
+    
+    //     {
+    //     document.getElementById("one").innerHTML="i"
+    // }
+
+    }
+
+</script>
+</html>

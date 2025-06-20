@@ -1,0 +1,109 @@
+
+<!-- date -20/06/2025 -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .span{
+            width:20px;
+            height:20px;
+            color:silver;
+
+        }
+    </style> -->
+</head>
+<style>
+        span{
+            width:100px;
+            height:100px;
+            color:silver;
+            background-color: wheat;
+            display:inline-flex;
+            margin:5px;
+            padding: 10px;
+
+        }
+
+        /* code taken from chatgpt */
+        #myBox {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      cursor: pointer;
+    }
+        
+    </style>
+<body>
+    <div>
+        <div>
+            <span id="a">a</span>
+            <span id="b">b</span>
+            <span id="c">c</span>
+        </div>
+        <div>
+            <span id="d">d</span>
+            <span id="e">e</span>
+            <span id="f">f</span>
+        </div>
+        <div>
+            <span id="g">g</span>
+            <span id="h">h</span>
+            <span id="i">i</span>
+        </div>
+        <!-- <div id="myBox"></div> -->
+    </div>
+    <button id="one">one</button>
+    <button id="two">two</button>
+    <button id="three">three</button>
+</body>
+</html>
+<script>
+    let delay = function(){setTimeout(() => {}, 5000);}
+                    //setTimeout(() => {}, 2000);
+    
+    document.getElementById("one").onclick=function(){document.getElementById("a").style.backgroundColor="yellow";
+    console.log("first");
+                    //time();
+    setTimeout(() => {document.getElementById("b").style.backgroundColor="green";}, 1000);
+    delay();
+    console.log("second");
+    //document.getElementById("b").style.backgroundColor="green";
+                    //time();
+                    //setTimeout(() => {}, 2000);
+    setTimeout(()=>{document.getElementById("c").style.backgroundColor="red";}, 1500)
+    //document.getElementById("c").style.backgroundColor="red";
+    console.log("third");}
+
+    
+    
+    document.getElementById("two").onclick=function(){
+        document.getElementById("d").style.backgroundColor="green";
+        delay();
+        document.getElementById("e").style.backgroundColor="black";}
+
+
+// document.getElementById("a").onclick=function(){document.getElementById("a").style.backgroundColor="yellow"};
+
+
+// // below example is taken from chat gpt nd it is working
+// document.getElementById("a").onclick = function() {
+// document.getElementById("a").style.backgroundColor = "lightgreen";
+// };
+
+
+
+
+//code taken from chat gpt and it is working
+// document.getElementById("myBox").onclick = function() {
+//   this.style.backgroundColor = "lightgreen";  // Change to any color
+// };
+</script>

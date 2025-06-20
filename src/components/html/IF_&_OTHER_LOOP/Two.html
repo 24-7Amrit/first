@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Firstone">
+        <span id="one-one"><input type="checkbox" id="one"></span>
+        <span id="one-two"><input type="checkbox" id="two"></span>
+    </div>
+    <div id="Secondtwo">
+        <span id="two-one"><input type="checkbox" id="three"></span>
+        <span id="two-two"><input type="checkbox" id="four"></span>
+    </div>
+    <input type="checkbox" id="check" onchange="this.style.accentColor = this.checked ? 'green' : 'red';">
+
+</body>
+</html>
+<script>
+    var a= document.getElementById("one");
+    // if(a.checked == true)
+    if (a.checked) {
+        checkbox.style.accentColor = "green"; // ✅ Checked - green color
+      } else {
+        checkbox.style.accentColor = "red";   // ❌ Unchecked - red color
+      }
+    // document.getElementById("Secondtwo").backgroundColor="green";
+</script>

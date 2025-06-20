@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+
+</head>
+<body>
+<form>
+<input type="text" id="username" name="username" value="">
+<input type="text" id="password" name="password" value="">
+Save username / password in cookies: <input type="checkbox" id="UPCheck" name="savelocalunpw">
+<p><button  id = "save" type="button">Save values!</button></p>
+<p><button  id = "load" type="button">Load values!</button></p>
+</form>
+
+</body>
+</html>
+<script>
+document.getElementById("save").addEventListener("click", function(){
+
+    var checkBox = document.getElementById("UPCheck");
+    if (checkBox.checked == true){
+        window.localStorage.username = document.getElementById('username').value;
+        window.localStorage.password = document.getElementById('password').value;
+        window.localStorage.unpwchecked = "yes";
+        alert("Saved!");
+    }
+    else
+    {
+        window.localStorage.username = "";
+        window.localStorage.password = "";
+        window.localStorage.unpwchecked = "";
+    }
+    });
+    
+    document.getElementById("load").addEventListener("click", function(){
+        document.getElementById('username').value = window.localStorage.username;
+        document.getElementById('password').value = window.localStorage.password;
+    });
+    
+    var alerted = localStorage.getItem('unpwchecked');
+    if (alerted == 'yes') {
+    document.getElementById('username').value = window.localStorage.username;
+    document.getElementById('password').value = window.localStorage.password;
+    document.getElementById("UPCheck").checked = true;
+    }
+</script>

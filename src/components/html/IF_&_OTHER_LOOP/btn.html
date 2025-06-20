@@ -1,0 +1,11 @@
+<button id="tempBtn" onclick="disableTemporarily()">Click (Disables for 3s)</button>
+
+<script>
+  function disableTemporarily() {
+    const btn = document.getElementById("tempBtn");
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.disabled = false;
+    }, 3000); // re-enable after 3 seconds
+  }
+</script>

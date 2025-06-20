@@ -1,0 +1,37 @@
+<!--      link https://www.w3schools.com/cssref/tryit.php?filename=trycss3_keyframes
+          https://www.w3schools.com/cssref/atrule_keyframes.php
+          https://www.w3schools.com/cssref/atrule_keyframes.php -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#o {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  
+}
+#p{
+	animation: mymove 5s infinite;
+	position: relative;
+    color:white;
+}
+@keyframes mymove {
+  from {top: -10px;}
+  to {top: 200px;}
+}
+</style>
+</head>
+<body>
+
+<h1>The @keyframes Rule</h1>
+
+<div id="o">
+<div id="p">abc</div></div>
+
+</body>
+</html>
+

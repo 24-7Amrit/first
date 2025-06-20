@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Checkbox Color</title>
+  <style>
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      accent-color: lightgray; /* default color */
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Toggle Checkbox Color</h2>
+  <input type="checkbox" id="myCheckbox" class="checkbox">
+
+  <script>
+    const checkbox = document.getElementById("myCheckbox");
+
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        checkbox.style.accentColor = "green"; // ✅ Checked - green color
+      } else {
+        checkbox.style.accentColor = "red";   // ❌ Unchecked - red color
+      }
+    });
+  </script>
+
+</body>
+</html>

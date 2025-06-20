@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            width: 23%;
+            height: 50px;
+            margin: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="result" disabled>
+        <br>
+        <button onclick="clearScreen()">C</button>
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+        <br>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('+')">+</button>
+        <br>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('-')">-</button>
+        <br>
+        <button onclick="display('0')">0</button>
+        <button onclick="display('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="display('*')">×</button>
+        <br>
+        <button onclick="display('/')">÷</button>
+    </div>
+
+    <script>
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+
+        function calculate() {
+            try {
+                document.getElementById("result").value = eval(document.getElementById("result").value);
+            } catch (e) {
+                alert("Invalid Calculation");
+                clearScreen();
+            }
+        }
+    </script>
+
+</body>
+</html>

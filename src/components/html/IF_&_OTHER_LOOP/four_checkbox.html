@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkbox Color Change</title>
+  <style>
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      accent-color: gray; /* default */
+      transition: accent-color 0.3s;
+    }
+    div{
+        width: 30px;
+        height: 30px;
+        border: 1px;
+        accent-color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Change Checkbox Color (No Event Listener)</h3>
+
+    <input type="checkbox" id="myCheckbox" class="checkbox"
+         onclick="changeColor(this)">
+    <input type="checkbox" id="myCheckbox" class="checkbox"
+         onclick="changeColor(this)">
+    <div>we re </div>
+  <script>
+    function changeColor(checkbox) {
+      checkbox.style.accentColor = checkbox.checked ? "green" : "red";
+    }
+  </script>
+
+</body>
+</html>

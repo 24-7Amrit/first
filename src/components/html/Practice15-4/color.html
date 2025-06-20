@@ -15,7 +15,7 @@
     }
 </style>
 <body>
-    <div id="div1" onclick="colorChange()">    </div>
+    <div id="div1" onclick="colorChange()">  a  </div>
 </body>
 </html>
 
@@ -23,7 +23,8 @@
     function colorChange(){
         if(document.getElementById("div1").style.backgroundColor==="white")
         {
-            document.getElementById("div1").style.backgroundColor="green";
+            document.getElementById("div1").style.backgroundColor="green"
+            document.getElementById("div1").blur();
         }
         else if (document.getElementById("div1").style.backgroundColor="green")
         {
