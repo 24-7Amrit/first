@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Filter</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    label, select { margin-right: 10px; }
+    #result { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Filter Cars</h2>
+
+  <label for="make">Make:</label>
+  <select id="make" onchange="filterCars()">
+    <option value="">All</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Honda">Honda</option>
+    <option value="Ford">Ford</option>
+  </select>
+
+  <label for="model">Model:</label>
+  <select id="model" onchange="filterCars()">
+    <option value="">All</option>
+    <option value="Camry">Camry</option>
+    <option value="Civic">Civic</option>
+    <option value="F-150">F-150</option>
+  </select>
+
+  <label for="year">Year:</label>
+  <select id="year" onchange="filterCars()">
+    <option value="">All</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select>
+
+  <div id="result"></div>
+
+  <script>
+    const cars = [
+      { make: 'Toyota', model: 'Camry', year: 2022 },
+      { make: 'Honda', model: 'Civic', year: 2021 },
+      { make: 'Ford', model: 'F-150', year: 2020 },
+      { make: 'Toyota', model: 'Camry', year: 2020 },
+      { make: 'Honda', model: 'Civic', year: 2022 },
+      { make: 'Ford', model: 'F-150', year: 2021 }
+    ];
+
+    function filterCars() {
+      const make = document.getElementById('make').value;
+      const model = document.getElementById('model').value;
+      const year = document.getElementById('year').value;
+
+      const filtered = cars.filter(car => {
+        return (!make || car.make === make) &&
+               (!model || car.model === model) &&
+               (!year || car.year.toString() === year);
+      });
+
+      displayCars(filtered);
+    }
+
+    function displayCars(carList) {
+      const result = document.getElementById('result');
+      if (carList.length === 0) {
+        result.innerHTML = '<p>No cars match the filter.</p>';
+        return;
+      }
+
+      const html = carList.map(car =>
+        `<p>${car.year} ${car.make} ${car.model}</p>`
+      ).join('');
+      result.innerHTML = html;
+    }
+
+    // Show all cars by default
+    filterCars();
+  </script>
+
+</body>
+</html>
