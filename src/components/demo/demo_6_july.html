@@ -1,0 +1,103 @@
+<style>
+  .container {
+    display: flex;
+  }
+  .box {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightblue;
+  }
+</style>
+
+<div class="container">
+  <div class="box">Box 1<hr>
+    <div class="container">
+        <div class="inside1"></div>
+        <div class="inside2"></div>
+    </div>
+    </div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+<style>
+    .inside1{
+        margin:12px;
+        padding:20px;
+        width:5px;
+        height:10px;
+        background-color: aquamarine;
+    }
+    .inside2{
+        margin:10px;
+        width:5px;
+        padding:20px;
+        height:10px;
+        background-color: aquamarine;
+    }
+</style>
+first ends
+<hr>
+
+
+<style>
+  .box {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 10px;
+  }
+</style>
+
+<div class="box">Box A</div>
+<div class="box">Box B</div>
+<div class="box">Box C</div>
+<hr>
+Second ends
+
+<hr>
+<hr>
+
+<!-- there is some problem in below code kindly check -->
+<style>
+  .box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: pink;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style>
+
+<div class="clearfix">
+  <div class="box">Box X</div>
+  <div class="box">Box Y</div>
+  <div class="box">Box Z</div>
+</div>
+<!-- there is a problem in above code -->
+
+
+<style>
+  .line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: gray;
+  }
+</style>
+
+<div class="line-container">
+  <div class="line"></div>
+</div>
